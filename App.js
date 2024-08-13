@@ -5,7 +5,7 @@ const client = new Client({intents: 32767});
 require("./Utils/eventLoader.js")(client)
 require("./Utils/slashHandler.js")(client)
 
-// CrashHandler --------------------------------------------------------------
+// CrashHandler ------------------------------------------------------------------------------------------------
 process.on('unhandledRejection', (reason, p) => {
     console.error(reason);
 });
@@ -15,6 +15,9 @@ process.on("uncaughtException", (err, origin) => {
 process.on('uncaughtExceptionMonitor', (err, origin) => {
     console.error(' [AntiCrash] :: Uncaught Exception/Catch (MONITOR)');
 });
-// CrashHandler --------------------------------------------------------------
+process.on('multipleResolves', (type, promise, reason) => {
+    console.error(' [AntiCrash] :: Multiple Resolves');
+});
+// CrashHandler ------------------------------------------------------------------------------------------------
 
 client.login(config.Token);
