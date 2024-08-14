@@ -6,7 +6,15 @@ Eğer botu glitch üzerinden çalıştırıyorsanız `package.json` dosyasını 
 
 ```json
 {
+  "name": "moderasyon-botu",
+  "version": "1.0.0",
+  "description": "Tyial tarafından geliştirilen, optimize edilebilir bir Discord slash komutlarıyla çalışan moderasyon botu altyapısı.",
   "main": "App.js",
+  "license": "MIT",
+  "author": {
+    "name": "Tyial",
+    "url": "https://tyial.xyz/"
+  },
   "scripts": {
     "start": "node App.js"
   },
@@ -17,6 +25,18 @@ Eğer botu glitch üzerinden çalıştırıyorsanız `package.json` dosyasını 
     "discord.js": "^13.6.0",
     "fs": "^0.0.1-security",
     "ms": "^2.1.3"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "moderasyon",
+    "altyapı",
+    "tyial",
+    "Tyial"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tyial/discordjs-v13-slashli-moderasyon-botu.git"
   },
   "engines": {
     "node": "16.x"
