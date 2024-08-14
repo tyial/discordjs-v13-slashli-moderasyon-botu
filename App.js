@@ -5,6 +5,7 @@ const client = new Client({intents: 32767});
 require("./Utils/eventLoader.js")(client)
 require("./Utils/slashHandler.js")(client)
 
+// Botu Kullanmadan README.md dosyasını okuyun!
 // CrashHandler ------------------------------------------------------------------------------------------------
 process.on('unhandledRejection', (reason, p) => {
     console.error(reason);
